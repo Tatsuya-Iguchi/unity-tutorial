@@ -52,10 +52,14 @@ public class CamPos : MonoBehaviour
         if (distance > minDistance)
         {
             goalDistance.GetComponent<Text>().text = "残り" + distance.ToString("f1") + "m です。";
+            goalDistance.GetComponent<Text>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+            GameObject.Find(target).SetActive(true);
         }
         else
         {
             goalDistance.GetComponent<Text>().text = "目的地付近です。";
+            goalDistance.GetComponent<Text>().color = new Color(0.0f, 0.8f, 0.0f, 1.0f);
+            GameObject.Find(target).SetActive(false);
         }
 
 
