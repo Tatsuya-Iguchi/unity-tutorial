@@ -30,14 +30,14 @@ public class ButtonManager: MonoBehaviour
     {
         goal = "トイレ近くのプリンター";
         target = "GoalA";
-        SceneManager.LoadScene("Navigation");
+        //SceneManager.LoadScene("Navigation");
     }
 
     public void ToTitle()
     {
         goal = "N06の柱付近";
         target = "GoalB";
-        SceneManager.LoadScene("Title");
+        //SceneManager.LoadScene("Title");
     }
 
     //for DEBUG
@@ -51,8 +51,4 @@ public class ButtonManager: MonoBehaviour
         GUI.Label(new Rect(30, 200, 256, 256), sb.ToString());
     }
 
-    public static Vector3 getCameraPosition()
-    {
-        return cameraPosition;
-    }
 }
