@@ -6,10 +6,11 @@ public class BulletCollision : MonoBehaviour
 {
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("MSG: Bullet Collision" + col);
-        if (col.gameObject.tag == "Bullet")
+        Debug.Log("MSG: Bullet Collision");
+        if (col.gameObject.tag == "Target")
         {
             Destroy(gameObject);
+            Debug.Log("MSG: Bullet is Destroy");
         }
     }
 }
