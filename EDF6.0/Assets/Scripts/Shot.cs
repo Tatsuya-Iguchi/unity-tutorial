@@ -19,9 +19,11 @@ public class Shot : MonoBehaviour
         {
             GameObject bullets = Instantiate(bullet) as GameObject;
             Vector3 force;
-            force = this.gameObject.transform.forward * speed;
+            force = Camera.main.transform.forward * speed;
             bullets.GetComponent<Rigidbody>().AddForce(force);
             bullets.transform.position = muzzle.position;
+
+            Destroy(bullets, 3.0f);
         }
     }
 }
