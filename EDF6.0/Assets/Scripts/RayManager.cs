@@ -8,7 +8,7 @@ public class RayManager : MonoBehaviour
     [SerializeField]
     float distance = 350.0f;
     [SerializeField]
-    Text reticule;
+    Text reticule = null;
     [SerializeField]
     Color origin = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     [SerializeField]
@@ -21,7 +21,7 @@ public class RayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * 350, Color.yellow);
 
         RaycastHit hit;
