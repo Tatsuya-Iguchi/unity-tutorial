@@ -6,7 +6,7 @@ public class GPSManager: MonoBehaviour
 {
     public double latitude = 35.657716; //35.692892
     public double longitude = 139.796801; //139.729042
-    const double lat2km = 111319.491;
+    const double lat2km = 111319.491; // 緯度（経度）1°分の差分
 
     public Vector3 ConvertGPS2ARCoordinate(LocationInfo location)
     {
