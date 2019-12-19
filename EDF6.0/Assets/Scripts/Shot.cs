@@ -23,7 +23,7 @@ public class Shot : MonoBehaviour
             bullets.GetComponent<Rigidbody>().AddForce(force);
             bullets.transform.position = muzzle.position;
 
-            Destroy(bullets, 3.0f);
+            //Destroy(bullets, 3.0f);
         }
     }
 }
