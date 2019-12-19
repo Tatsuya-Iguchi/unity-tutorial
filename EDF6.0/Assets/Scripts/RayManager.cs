@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RayManager : MonoBehaviour
 {
     [SerializeField]
-    float distance = 350.0f;
+    float distance = 150.0f;
     [SerializeField]
     Text reticule = null;
     [SerializeField]
