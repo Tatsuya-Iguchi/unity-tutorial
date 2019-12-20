@@ -10,11 +10,12 @@ public class GPSManager: MonoBehaviour
     [SerializeField]
     double longitude = 139.729042;
     [SerializeField]
+    bool isDebug = false;
+    [SerializeField]
     double debug_latitude = 35.657716;
     [SerializeField]
     double debug_longitude = 139.796801;
-    [SerializeField]
-    bool isDebug = false;
+    
 
     public Vector3 ConvertGPS2ARCoordinate(LocationInfo location)
     {
