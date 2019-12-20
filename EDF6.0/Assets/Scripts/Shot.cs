@@ -11,7 +11,7 @@ public class Shot : MonoBehaviour
     [SerializeField]
     float speed = 100;
     [SerializeField]
-    GameObject ps;
+    GameObject ps = null;
 
     private ParticleSystem muzzleFlash;
     private float timer = 0.0f;
@@ -40,6 +40,8 @@ public class Shot : MonoBehaviour
 
     void Shooting()
     {
+        Debug.Log("MSG: shoooooooot ");
+        muzzleFlash.Stop();
         muzzleFlash.Play();
         GameObject bullets = Instantiate(bullet) as GameObject;
         Vector3 force;

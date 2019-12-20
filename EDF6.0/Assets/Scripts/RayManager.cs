@@ -29,7 +29,7 @@ public class RayManager : MonoBehaviour
         {
             if ((hit.collider.tag.Equals("Target")))
             {
-                Debug.Log("MSG: within color");
+                Debug.Log("MSG: within color " + hit.collider.tag);
                 reticule.color = within;
             }
         }

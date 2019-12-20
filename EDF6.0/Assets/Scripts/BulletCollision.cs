@@ -6,7 +6,7 @@ public class BulletCollision : MonoBehaviour
 {
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("MSG: Bullet Collision");
+        Debug.Log("MSG: Bullet Collision :" + col.gameObject.tag);
         if (col.gameObject.tag == "Target")
         {
             Destroy(gameObject);
