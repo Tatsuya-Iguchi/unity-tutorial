@@ -32,8 +32,11 @@ public class Shot : MonoBehaviour
         }
         if (timer > effectTime)
         {
-            muzzleFlash.Stop();
-            Debug.Log("MSG: mF stop");
+            if (muzzleFlash.isPlaying)
+            {
+                muzzleFlash.Stop();
+                Debug.Log("MSG: mF stop");
+            }
             timer = 0.0f;
         }
     }
@@ -41,7 +44,6 @@ public class Shot : MonoBehaviour
     void Shooting()
     {
         Debug.Log("MSG: shoooooooot ");
-        muzzleFlash.Stop();
         muzzleFlash.Play();
         GameObject bullets = Instantiate(bullet) as GameObject;
         Vector3 force;
