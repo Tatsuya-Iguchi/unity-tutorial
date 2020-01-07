@@ -25,17 +25,19 @@ public class RayManager : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * 350, Color.yellow);
 
         RaycastHit hit;
+        Debug.Log("MSG:RM: ");
         if (Physics.Raycast(ray, out hit, distance))
         {
             if ((hit.collider.tag.Equals("Target")))
             {
-                Debug.Log("MSG: within color " + hit.collider.tag);
+                Debug.Log("MSG:RM: within color " + hit.collider.tag);
                 reticule.color = within;
             }
+            Debug.Log("MSG:RM: ?????? " + hit.collider.name);
         }
         else
         {
-            Debug.Log("MSG: origin color");
+            Debug.Log("MSG:RM: origin color");
             reticule.color = origin;
         }
     }

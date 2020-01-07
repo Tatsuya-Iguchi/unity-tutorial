@@ -7,6 +7,7 @@ TagManager:
   - Debug
   - Target
   - Bullet
+  - Particle
   layers:
   - Default
   - TransparentFX
